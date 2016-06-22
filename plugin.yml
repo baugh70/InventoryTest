@@ -1,0 +1,9 @@
+name: InvTest
+main: co.binarylife.invtest.ExampleMain
+version: Beta
+author: TheBinaryLife
+depend: [InventoryAPI]
+commands:
+  invexample:
+    description: Inventory Example command
+    usage: /invexample
