@@ -9,7 +9,7 @@ public class ExampleMain extends JavaPlugin{
 	public void onEnable(){
 			
 	    getCommand("invexample").setExecutor(new ExampleCommand(this));
-	    InventoryManager.getInstance().addGUI(new ExampleGUI(this), new ExampleEvent());
+	    InventoryManager.getInstance().addGUI(new ExampleGUI(this));
 	}
 	
 }
