@@ -14,11 +14,13 @@ public class ExampleEvent implements InvEvent{
 	private ItemStack stack;
 	private Player player;
 	
+	// Gets name of inventory and the slot that the event occurs in
 	ExampleEvent(String name, int slot){
 		invName = name;
 		this.slot = slot;
 	}
 	
+	// React method that is called when the action takes place
 	public void react(InventoryClickEvent event, ItemStack stack, Player player){
 		this.event = event;
 		this.player = player;

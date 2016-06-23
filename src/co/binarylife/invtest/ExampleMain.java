@@ -6,6 +6,7 @@ import us.legioncraft.inventorygui.InventoryGUI;
 
 public class ExampleMain extends JavaPlugin{
 	
+	// Adds GUIS and enables command
 	public void onEnable(){
 			
 	    getCommand("invexample").setExecutor(new ExampleCommand(this));

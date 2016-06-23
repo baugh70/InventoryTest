@@ -9,12 +9,14 @@ import us.legioncraft.inventorygui.inventory.GUI;
 
 public class ExampleGUI extends GUI{
 	
+	// Creates GUI and feeds needed information to the GUI class and adds events
 	public ExampleGUI(ExampleMain plugin){
 		super("EXAMPLE_INVENTORY", 9, plugin.getServer().createInventory(null, 9), createItems());
 		
 		addEvent(new ExampleEvent("EXAMPLE_INVENTORY", 1));
 	}
 	
+	// Adds items to inventory
 	public static HashMap<Integer, ItemStack> createItems(){
 		HashMap<Integer, ItemStack> items = new HashMap<>();
 		
@@ -29,11 +31,5 @@ public class ExampleGUI extends GUI{
 		return items;
 	}
 	
-	
-//	public void addEvents(){
-//		events = new ArrayList<>();
-//		
-//		events.add(new ExampleEvent("EXAMPLE_INVENTORY", 1));
-//	}
 }
 
