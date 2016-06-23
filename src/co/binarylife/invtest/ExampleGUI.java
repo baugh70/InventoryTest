@@ -1,19 +1,18 @@
 package co.binarylife.invtest;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
 
 import us.legioncraft.inventorygui.inventory.GUI;
-import us.legioncraft.inventorygui.inventory.event.InvEvent;
 
 public class ExampleGUI extends GUI{
-	private ArrayList<InvEvent> events;
 	
 	public ExampleGUI(ExampleMain plugin){
 		super("EXAMPLE_INVENTORY", 9, plugin.getServer().createInventory(null, 9), createItems());
+		
+		addEvent(new ExampleEvent("EXAMPLE_INVENTORY", 1));
 	}
 	
 	public static HashMap<Integer, ItemStack> createItems(){
@@ -30,10 +29,11 @@ public class ExampleGUI extends GUI{
 		return items;
 	}
 	
-	public void addEvents(){
-		events = new ArrayList<>();
-		
-		events.add(new ExampleEvent("EXAMPLE_INVENTORY", 1));
-	}
+	
+//	public void addEvents(){
+//		events = new ArrayList<>();
+//		
+//		events.add(new ExampleEvent("EXAMPLE_INVENTORY", 1));
+//	}
 }
 

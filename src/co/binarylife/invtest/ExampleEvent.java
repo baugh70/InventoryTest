@@ -13,6 +13,7 @@ public class ExampleEvent implements InvEvent{
 	private InventoryClickEvent event;
 	private ItemStack stack;
 	private Player player;
+	
 	ExampleEvent(String name, int slot){
 		invName = name;
 		this.slot = slot;
